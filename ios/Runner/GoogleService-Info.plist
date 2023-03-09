@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>929132039087-pqi0efkmlddlerbnce9p4rne1jc0dhpf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.929132039087-pqi0efkmlddlerbnce9p4rne1jc0dhpf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDDDLMpQCZKsJQ0bFEVod_AzqkcnR_M-I8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>929132039087</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.ambiora</string>
+	<key>PROJECT_ID</key>
+	<string>ambiora-55901</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ambiora-55901.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:929132039087:ios:96eadc685bc72ef5b2fd5a</string>
+</dict>
+</plist>

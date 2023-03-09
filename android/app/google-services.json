@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "929132039087",
+    "project_id": "ambiora-55901",
+    "storage_bucket": "ambiora-55901.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929132039087:android:332593ef95cf0f34b2fd5a",
+        "android_client_info": {
+          "package_name": "com.example.ambiora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929132039087-gbmp9ds96vo7n11sb71ckqf1dhd8ctt9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWSxAUrb9nuRyZdm3gD46MDY6yEZcpB7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929132039087-gbmp9ds96vo7n11sb71ckqf1dhd8ctt9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

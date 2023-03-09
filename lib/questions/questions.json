@@ -1,0 +1,191 @@
+{
+  "questions": [
+    {
+      "question": "import React from 'react'\nimport { useState, useEffect ,useCallback} from 'react'\nimport './trip-list.css'\n\nexport default function TripList() {\nconst [trips, setTrips] = useState([])\nconst [url, setUrl]= useState('http://localhost:3000/trips')\nconst fetchTrips = useCallback (async () => {\n\tconst response = await fetch(url)\n\tconst json = await response.json()\n\tsetTrips(json)\n},[url])\n\nuseEffect(() = {\n\tfetchTrips()\n}, [url, fetchTrips])\n\nconsole.log(trips)",
+      "statement": "error: Expression expected in useffect",
+      "answers": ["()=>", "Function() ={}", "() {}", "Function={}"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "import React, { useState } from 'react';\n\nconst App = () => {\n\tconst [count, setCount] = useState(0);\n\nreturn (\n\t<div>\n\t\t<p>The count is {count}</p>\n\t\t<button onClick={() => setCount(count + 1)}>Increment</button>\n\t\t</div>\n\t);\n};\n\nexport default App;",
+      "statement": "What is the error?",
+      "answers": [
+        "The useState hook is not imported correctly",
+        "The setCount function is not updating the state properly",
+        "The count state is not being passed to the setCount function as an argument",
+        "There is no error in the code."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "import React, { useState } from 'react';\n\nconst App = () => {\n\tconst [state, setState] = useState({\n\t\tname: '',\n\t\temail: '',\n\t});\n\tconst handleChange = (event) => {\n\t\tsetState({\n\t\t\t...state,\n\t\t\t[event.target.name]: event.target.value,\n\t\t});\n\t};\n\treturn (\n\t\t<form>\n\t\t\t<input type=\"text\" name=\"name\" onChange={handleChange} />\n\t\t\t<input type=\"email\" name=\"email\" onChange={handleChange} />\n\t\t</form>\n\t);\n};\n\nexport default App;",
+      "statement": "What is the error?",
+      "answers": [
+        "The handleChange function is not updating the state properly",
+        "The name and email properties in the state object are not correctly being updated in the handleChange function",
+        "The handleChange function is not being passed to the input elements as the onChange prop",
+        "There is no error in the code."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "void main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn MaterialApp(\n\t\t\thome: Scaffold(\n\t\t\t\tbody: Center(\n\t\t\t\t\tchild: Text('Hello World'),\n\t\t\t\t),\n\t\t\t),\n\t\t);\n\t}\n}",
+      "statement": "What is the output of the following asynchronous Dart code?",
+      "answers": [
+        "The Scaffold widget is not imported correctly",
+        "The Text widget does not have any text to display",
+        "Package Problem",
+        "The runApp method is not being passed the MyApp widget"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "interface A\n{\nprivate int i;\n}",
+      "statement": "Identify the error in the following code:",
+      "answers": [
+        "Variables cannot be declared in an interface, only methods.",
+        "Variables can be declared, but they can only be public.",
+        "Variables declared must be initialised.",
+        "Both (b) and (c)"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "#include<iostream>\nusing namespace std;\n\nclass Test{\nstatic int i;\nint j;\n};\n\nint Test::i;\n\nint main(){\ncout << sizeof(Test);\nreturn 0;\n}",
+      "statement": "What is the output of the code?",
+      "answers": ["4", "6", "8", "Code will not compile."],
+      "correctAnswer": 0
+    },
+    {
+      "question": "# Program to check if 'a' is greater than or equal to 'b'\na = 25\nb = 20\nif a => b:\nprint(\"a is greater!\")",
+      "statement": "Debug the following Python code:",
+      "answers": [
+        "Exclamatory mark (!) cannot be used in print statement.",
+        "Indentation is not correct.",
+        "Incorrect use of comparison operator.",
+        "None of the above"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "const oneSecond = Duration(seconds: 1);\nFuture<void> printWithDelay(String message) async {\nawait Future.delayed(oneSecond);\nprint(message);\n}\n\nvoid main(){\nprintWithDelay(\"Ambiora\");\nprint(\"Techfest\");\n}",
+      "statement": "What is the output of the following asynchronous Dart code?",
+      "answers": [
+        "Ambiora\nTechfest",
+        "Techfest\nAmbiora",
+        "AmbioraTechfest",
+        "None of the above"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatelessWidget {\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn MaterialApp(\n\t\t\thome: Scaffold(\n\t\t\t\tbody: Center(\n\t\t\t\t\tchild: Column(\n\t\t\t\t\t\tmainAxisAlignment: MainAxisAlignment.center,\n\t\t\t\t\t\tchildren: <Widget>[\n\t\t\t\t\t\t\tText(\n\t\t\t\t\t\t\t\t'You have pushed the button this many times:',\n\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\tText(\n\t\t\t\t\t\t\t\t'$_counter',\n\t\t\t\t\t\t\t\tstyle: Theme.of(context).textTheme.headline4,\n\t\t\t\t\t\t\t),\n\t\t\t\t\t\t],\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t\tfloatingActionButton: FloatingActionButton(\n\t\t\t\t\tonPressed: _incrementCounter,\n\t\t\t\t\ttooltip: 'Increment',\n\t\t\t\t\tchild: Icon(Icons.add),\n\t\t\t\t),\n\t\t\t),\n\t\t);\n\t}\n}",
+      "statement": "What is the error?",
+      "answers": [
+        "The FloatingActionButton widget is not imported correctly",
+        "The _incrementCounter function is not updating the state properly",
+        "The setState method is not being passed a function to update the _counter variable",
+        "Wrong implementation of stateless widget"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "def func(x, ans):\n\tif(x==0):\n\t\treturn 0\n\telse:\n\t\treturn func(x-1, x+ans)\nprint(func(2,0))",
+      "statement": "What is the output of the following Python code?",
+      "answers": ["0", "1", "2", "3"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "#include<iostream>\n\nusing namespace std;\nmain() {\n\tint r, x = 2;\n\n\tfloat y = 5;\n\n\tr = y%x;\n\tcout<<r;\n}",
+      "statement": "What is the output of the following C++ code?",
+      "answers": ["1", "0", "2", "Compile error"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "#include<stdio.h>\nmain()\n{\nint i;\nchar s[] = \"hello\";\nfor(i=0; s[i]; ++i);\nprintf(\"%d \", i);\ni=0;\nwhile(s[i++]);\nprintf(\"%d \", i);\n}",
+      "statement": "Does both the loops in the following programs prints the correct string length?",
+      "answers": [
+        "Yes, both the loops print the correct string length.",
+        "Only for loop prints the correct length",
+        "Only while loop prints the correct length",
+        "Compile error in the program"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "class A: \n\tdef __init__(self, i=100): \n\t\tself.i=i \nclass B(A): \n\tdef __init__(self,j=0): \n\t\tself.j=j \ndef main(): \n\tb= B() \n\tprint(b.i) \n\tprint(b.j) \nmain()",
+      "statement": "What happens in the below code?",
+      "answers": [
+        "Class B inherits all the data fields of class A.",
+        "Class B needs an Argument.",
+        "The data field ‘j’ cannot be accessed by object b.",
+        "Class B is inheriting class A but the data field ‘i’ in A cannot be inherited."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "#include<stdio.h>\n#include<stdlib.h>\n#define MAXROW 4\n# define MAXCOL 5\nint main ()\n{\nint **p, i, j\np = (int **) malloc(MAXROW * sizeof(int*));\nreturn 0;\n}",
+      "statement": "The given below program allocates the memory, what function will you use to free the allocated memory?",
+      "answers": [
+        "memfree(int p);",
+        "free(p);",
+        "dealloc(p);",
+        "Both, free(p); & dealloc(p);"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "int main()\n{\nint arr[] = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13};\nint *p = (arr + 1);\ncout << *arr + 9;\nreturn 0;\n}",
+      "statement": "What is the output of the following C++ code?",
+      "answers": ["9", "13", "22", "error"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "class Test\n{\n\tpublic static void main (String[] args) \n\t{\n\t\tint arr1[] = {1, 2, 3};\n\t\tint arr2[] = {1, 2, 3};\n\t\tif (arr1 == arr2) \n\t\t\tSystem.out.println(\"Same\");\n\t\telse\n\t\t\tSystem.out.println(\"Not same\");\n\t}\n}",
+      "statement": "What is the output of the following Java code?",
+      "answers": ["Same", "Not same", "Compile error", "Runtime error"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "int multiplyRec(int m, int n)\n{\n\tif(n == 1)\n\t\treturn m;\n\treturn m + multiplyRec(m,  n - 1);\n}",
+      "statement": "What is the Time Complexity of the following recursive function?",
+      "answers": ["O(m*n)", "O(n)", "O(n^2)", "O(m)"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "def f():\n\ta = 0\n\tfor i in range(1, n):\n\t\ta += random.randint()\n\t\tb = 0\n\t\tfor j in range(1, m):\n\t\t\tb += random.randint()",
+      "statement": "What is the Time Complexity of the following recursive function?",
+      "answers": ["O(n)", "O(m)", "O(n+m)", "O(n*m)"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "randomList = ['a',2,3]\nfor element in randomList:\n\tprint('The Element is ',element)\n\tx=int(element + 1)\n\tprint('The Increment of ',element,'is',x)",
+      "statement": "Which of the following Error will be raised by the Given Python Code?",
+      "answers": ["NameError", "ValueError", "TypeError", "IOError"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "int main()\n{\n\tint a[5] = {7, 21, 18, 26, 31};\n\tint i, j, m;\n\tfor(i=0;i<4;i++)\n\t{\n\t\t++a[i];\n\t\ta[i+1]++;\n\t\ta[i++];\n\t\tcout<<a[i];\n\t}\n\treturn 0;\n}",
+      "statement": "What is the output of the following C++ code?",
+      "answers": ["2227", "2227992", "8221", "8221992"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "#include<iostream>\nusing namespace std;\nint main (){\nif (!(cout << \"Techfest\" ) )\ncout << \"Ambiora\";\nelse\ncout << \" 2023\";\nreturn 0;\n}",
+      "statement": "What is the output of the following C++ code?",
+      "answers": ["2023", "Ambiora 2023", "Techfest 2023", "Techfest"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "#include<iostream>\nusing namespace std;\nint N=25;\nint main(){\nstatic int a=15;\na++;\nif(cout<<a<<\" \"&&a++<N&&main())\n{}\nreturn 0;\n}",
+      "statement": "What is the output of the following C++ code?",
+      "answers": [
+        "15 16 17 18 19 20 21",
+        "15 17 19 21",
+        "16 18 20 22",
+        "16 18 20"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}
