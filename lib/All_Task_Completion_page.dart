@@ -43,11 +43,10 @@ class _lastPageState extends State<lastPage> {
                   child: Text(
                     "Last Clue",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.bold
-                    ),
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -58,10 +57,7 @@ class _lastPageState extends State<lastPage> {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   (currClueIndex >= 0) ? groupAClues[currClueIndex] : "",
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontFamily: "Poppins"
-                  ),
+                  style: const TextStyle(fontSize: 20, fontFamily: "Poppins"),
                 ),
               ),
             ]),

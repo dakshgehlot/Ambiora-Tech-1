@@ -43,11 +43,10 @@ class _QrLandingPageState extends State<QrLandingPage> {
                   child: Text(
                     "Last Clue",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontFamily: "Poppins"
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontFamily: "Poppins"),
                   ),
                 ),
               ),
@@ -58,10 +57,7 @@ class _QrLandingPageState extends State<QrLandingPage> {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   (currClueIndex >= 0) ? groupAClues[currClueIndex] : "",
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontFamily: "Poppins"
-                  ),
+                  style: const TextStyle(fontSize: 20, fontFamily: "Poppins"),
                 ),
               ),
             ]),
@@ -163,7 +159,8 @@ class _QrLandingPageState extends State<QrLandingPage> {
                           //     );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 254, 125, 85),
+                          backgroundColor:
+                              const Color.fromARGB(255, 254, 125, 85),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),

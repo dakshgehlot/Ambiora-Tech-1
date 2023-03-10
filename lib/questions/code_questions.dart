@@ -20,6 +20,7 @@ class Question {
 }
 
 Future<void> readquestionJson() async {
+  questions = [];
   final String response =
       await rootBundle.loadString('lib/questions/questions.json');
   final data = await json.decode(response);
@@ -37,4 +38,4 @@ Future<void> readfunquestionJson() async {
   }
 }
 
-final List<Question> questions = [];
+List<Question> questions = [];
