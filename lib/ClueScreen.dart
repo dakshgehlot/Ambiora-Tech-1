@@ -22,6 +22,7 @@ class _ClueScreenState extends State<ClueScreen> {
           return false;
         },
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           drawer: Drawer(
             child: Column(
                 children: [
