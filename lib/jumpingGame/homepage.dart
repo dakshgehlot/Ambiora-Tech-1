@@ -3,8 +3,6 @@ import 'dart:math';
 import 'package:ambiora/ClueScreen.dart';
 import 'package:ambiora/clues.dart';
 
-import 'barrier.dart';
-import 'dummy.dart';
 import 'guthrie.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +60,7 @@ class _HomePageState extends State<HomePage> {
       //Y = 4.9 time * time + 28 * time
 
       height = gravity * time * time + velocity * time;
-      if (score >= 100) {
+      if (score >= 500) {
         timer.cancel();
       }
 
@@ -90,7 +88,7 @@ class _HomePageState extends State<HomePage> {
       //Moving the barriers
       //moveMap();
 
-      if (score >= 100) {
+      if (score >= 500) {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
