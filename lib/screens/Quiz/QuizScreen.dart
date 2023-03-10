@@ -38,50 +38,51 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Widget _option(String answer, int index) {
     return Container(
-      margin:
-          EdgeInsets.only(bottom: MediaQuery.of(context).size.height * 0.0125),
-      child: ElevatedButton(
-        style: ButtonStyle(
-          elevation: MaterialStateProperty.all(0),
-          backgroundColor: (isCorrect &&
-                  index == questions[currentQuestion].correctAnswer)
-              ? MaterialStateProperty.all(Colors.green)
-              : (isWrong && index != questions[currentQuestion].correctAnswer)
-                  ? MaterialStateProperty.all(Colors.red)
-                  : (isWrong &&
-                          index == questions[currentQuestion].correctAnswer)
-                      ? MaterialStateProperty.all(Colors.green)
-                      : MaterialStateProperty.all(Colors.grey),
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+        margin: EdgeInsets.only(
+            bottom: MediaQuery.of(context).size.height * 0.0125),
+        child: ElevatedButton(
+          style: ButtonStyle(
+            elevation: MaterialStateProperty.all(0),
+            backgroundColor: (isCorrect &&
+                    index == questions[currentQuestion].correctAnswer)
+                ? MaterialStateProperty.all(Colors.grey)
+                : (isWrong && index != questions[currentQuestion].correctAnswer)
+                    ? MaterialStateProperty.all(Colors.red)
+                    : (isWrong &&
+                            index == questions[currentQuestion].correctAnswer)
+                        ? MaterialStateProperty.all(Colors.red)
+                        : MaterialStateProperty.all(Colors.grey),
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            minimumSize: MaterialStateProperty.all(
+              Size(MediaQuery.of(context).size.width * 0.75,
+                  MediaQuery.of(context).size.height * 0.05),
             ),
           ),
-          minimumSize: MaterialStateProperty.all(
-            Size(MediaQuery.of(context).size.width * 0.75,
-                MediaQuery.of(context).size.height * 0.05),
-          ),
-        ),
-        onPressed: () {
-          setState(() {
-            if (index == questions[currentQuestion].correctAnswer) {
-              isCorrect = true;
-            } else {
-              isWrong = true;
-            }
-          });
-        },
-        child: Container(
-          padding: const EdgeInsets.all(6),
-          child: Text(
-            answer,
-            style: const TextStyle(
-              fontSize: 20,
+          onPressed: (isWrong || isCorrect)
+              ? () {}
+              : () {
+                  setState(() {
+                    if (index == questions[currentQuestion].correctAnswer) {
+                      isCorrect = true;
+                    } else {
+                      isWrong = true;
+                    }
+                  });
+                },
+          child: Container(
+            padding: const EdgeInsets.all(6),
+            child: Text(
+              answer,
+              style: const TextStyle(
+                fontSize: 20,
+              ),
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 
   @override
