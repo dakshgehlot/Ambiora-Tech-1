@@ -187,5 +187,140 @@
       ],
       "correctAnswer": 2
     }
+  ],
+
+  "new_questions": [
+    {
+      "question": "Which technology is used in cricket to know the speed of the ball?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Ultrasonic technology",
+        "Radar technology",
+        "The Hawk Eye technology",
+        "GPS technology"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which tech is used in cricket to know whether the bat and ball are contacted in an appeal of caught behind and LBW?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Snickometer",
+        "UltraEdge",
+        "Stump mic",
+        "Hot Spot"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which tech is used by FIFA for offside decisions in football?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "VAR",
+        "GLT",
+        "SAOT (Uses Hawk-eye cameras)",
+        "Aerial camera"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is a compression algorithm? Take reference from the TV show \"The Silicon Valley\".",
+      "statement": "Choose the correct option",
+      "answers": [
+        "A protocol for internet communication",
+        "A tool for database management",
+        "A type of virus scanner",
+        "A method to compress large video files"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is the best solution when the system goes down as per the TV show \"The IT Crowd\"?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Reinstall the operating system",
+        "Upgrade the hardware",
+        "Update the drivers",
+        "Try turning it off and on again"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "How is data profiling used in targeted advertising with reference to the TV show \"The Great Hack\"?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "To create targeted advertising campaigns",
+        "To hack into social media accounts",
+        "To steal credit card information",
+        "To create fake social media accounts"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What was the name of the voice of AI in the movie \"Her\"?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Scarlett Johansson",
+        "Emma Stone",
+        "Natalie Portman",
+        "Jennifer Lawrence"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "In the movie \"Interstellar,\" what is the name of the advanced AI robot and what is it used for?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "HAL 9000, used for space exploration",
+        "WALL-E, used for cleaning space debris",
+        "TARS, used for space exploration",
+        "C-3PO, used for translation"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "In the 2008 movie \"Ghajini,\" the protagonist, played by Aamir Khan, uses a unique system to keep track of his memories. What was the technology?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Polaroid pictures",
+        "Video recordings",
+        "Voice recordings",
+        "Written notes"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "How do Transformers change their shape and size from their robot form to their vehicle form and vice versa?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Through the use of magic",
+        "By shrinking and expanding their metal frame",
+        "Through a series of articulated joints and movable parts",
+        "By using a special transformation serum"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the technology behind Doraemon's magical gadget Bamboo-Copter?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "Solar energy",
+        "Wind power",
+        "Spinning the leaves at a high speed",
+        "A magic spell"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the name of the device that Phineas and Ferb invent to make themselves younger in the episode \"Doof Dynasty\"?",
+      "statement": "Choose the correct option",
+      "answers": [
+        "The Age-Decelerator-inator",
+        "The Youth-Enrichment Machine",
+        "The Anti-Aging Device",
+        "The Age-Accelerator-inator"
+      ],
+      "correctAnswer": 3
+    }
   ]
 }
