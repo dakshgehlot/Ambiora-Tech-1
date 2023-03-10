@@ -50,7 +50,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     ? MaterialStateProperty.all(Colors.red)
                     : (isWrong &&
                             index == questions[currentQuestion].correctAnswer)
-                        ? MaterialStateProperty.all(Colors.red)
+                        ? MaterialStateProperty.all(Colors.green)
                         : MaterialStateProperty.all(Colors.grey),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
