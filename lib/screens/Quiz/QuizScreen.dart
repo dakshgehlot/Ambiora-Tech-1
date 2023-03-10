@@ -6,46 +6,6 @@ import 'package:ambiora/questions/code_questions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-// final List<Question> questions = [
-//   Question(
-//       "<script type='text/javascript'>\nvar num1 = 2;\nvar num2 = 3;\nvar product = num1 x num2;\nalert('the product of ' + num1 + ' and ' + num2 + ' is ' + product);\n</script>",
-//       "Identify the error from the following code:",
-//       [
-//         "‘const’ keyword should be used for num1 and num2 declaration.",
-//         "‘let’ keyword should be used for num1 and num2 declaration.",
-//         "Use of concatenation operator is syntactically wrong.",
-//         "Multiplication operator is lexically wrong."
-//       ],
-//       3)
-// ];
-
-// class Question {
-//   final String question;
-//   final String statement;
-//   final List<String> answers;
-//   final int correctAnswer;
-
-//   Question(this.question, this.statement, this.answers, this.correctAnswer);
-
-//   factory Question.fromJson(Map<String, dynamic> json) {
-//     return Question(
-//       json['question'],
-//       json['statement'],
-//       List<String>.from(json['answers']),
-//       json['correctAnswer'],
-//     );
-//   }
-// }
-
-// Future<void> readJson() async {
-//   final String response =
-//       await rootBundle.loadString('lib/questions/questions.json');
-//   final data = await json.decode(response);
-//   for (var i = 0; i < data["questions"].length; i++) {
-//     questions.add(Question.fromJson(data["questions"][i]));
-//   }
-// }
-
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
 
@@ -196,7 +156,8 @@ class _QuizScreenState extends State<QuizScreen> {
                     if (isCooldownover) {
                       (currentQuestion + 1 == questions.length)
                           ? currentQuestion = 0
-                          : currentQuestion++;
+                          : currentQuestion =
+                              Random().nextInt(questions.length);
                       setState(() {
                         isCorrect = false;
                         isWrong = false;
