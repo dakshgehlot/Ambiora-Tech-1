@@ -72,6 +72,7 @@ flutter:
     - ./assets/images/ambiora.jpg
     - ./assets/images/QR.jpg
     - ./lib/questions/questions.json
+    - ./lib/questions/fun_questions.json
     - ./lib/jumpingGame/images/guthrie.jpg
     - ./lib/jumpingGame/images/pikachu.png
     - ./assets/json/background.json

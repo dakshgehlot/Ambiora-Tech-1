@@ -4,6 +4,7 @@ import 'package:ambiora/Scrambled_word_game/rules.dart';
 import 'package:ambiora/cards.dart';
 import 'package:ambiora/clues.dart';
 import 'package:ambiora/jumpingGame/homepage.dart';
+import 'package:ambiora/questions/code_questions.dart';
 import 'package:ambiora/screens/Quiz/QuizScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -145,11 +146,10 @@ class _QrScanState extends State<QrScan> {
                               : const Icon(Icons.flash_off),
                         ),
                         const Text(
-                            'Ambiora',
+                          'Ambiora',
                           style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.bold
-                          ),
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -163,8 +163,8 @@ class _QrScanState extends State<QrScan> {
                         width: 180,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 254, 125, 85)
-                          ),
+                              backgroundColor:
+                                  const Color.fromARGB(255, 254, 125, 85)),
                           onPressed: () {
                             if (code == groupAClues[currClueIndex + 1]) {
                               if (currClueIndex + 1 == 0) {
@@ -186,6 +186,7 @@ class _QrScanState extends State<QrScan> {
                                     builder: (context) => const QuizScreen(),
                                   ),
                                 );
+                                readfunquestionJson();
                               } else if (currClueIndex + 1 == 3) {
                                 Navigator.pushReplacement(
                                   context,
@@ -194,12 +195,12 @@ class _QrScanState extends State<QrScan> {
                                   ),
                                 );
                               } else if (currClueIndex + 1 == 4) {
-                                Navigator.pushReplacement(
-                                  context,
+                                Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
                                     builder: (context) => const QuizScreen(),
                                   ),
                                 );
+                                readquestionJson();
                               }
                             } else {
                               showDialog(
@@ -230,7 +231,7 @@ class _QrScanState extends State<QrScan> {
                                 width: 10,
                               ),
                               Text(
-                                  'Play Game',
+                                'Play Game',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontWeight: FontWeight.bold,

@@ -1,51 +1,50 @@
 // ignore_for_file: file_names
-
-import 'dart:convert';
-import 'package:ambiora/All_Task_Completion_page.dart';
+import 'dart:math';
 import 'package:ambiora/ClueScreen.dart';
 import 'package:ambiora/clues.dart';
+import 'package:ambiora/questions/code_questions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-final List<Question> questions = [
-  Question(
-      "<script type='text/javascript'>\nvar num1 = 2;\nvar num2 = 3;\nvar product = num1 x num2;\nalert('the product of ' + num1 + ' and ' + num2 + ' is ' + product);\n</script>",
-      "Identify the error from the following code:",
-      [
-        "‘const’ keyword should be used for num1 and num2 declaration.",
-        "‘let’ keyword should be used for num1 and num2 declaration.",
-        "Use of concatenation operator is syntactically wrong.",
-        "Multiplication operator is lexically wrong."
-      ],
-      3)
-];
+// final List<Question> questions = [
+//   Question(
+//       "<script type='text/javascript'>\nvar num1 = 2;\nvar num2 = 3;\nvar product = num1 x num2;\nalert('the product of ' + num1 + ' and ' + num2 + ' is ' + product);\n</script>",
+//       "Identify the error from the following code:",
+//       [
+//         "‘const’ keyword should be used for num1 and num2 declaration.",
+//         "‘let’ keyword should be used for num1 and num2 declaration.",
+//         "Use of concatenation operator is syntactically wrong.",
+//         "Multiplication operator is lexically wrong."
+//       ],
+//       3)
+// ];
 
-class Question {
-  final String question;
-  final String statement;
-  final List<String> answers;
-  final int correctAnswer;
+// class Question {
+//   final String question;
+//   final String statement;
+//   final List<String> answers;
+//   final int correctAnswer;
 
-  Question(this.question, this.statement, this.answers, this.correctAnswer);
+//   Question(this.question, this.statement, this.answers, this.correctAnswer);
 
-  factory Question.fromJson(Map<String, dynamic> json) {
-    return Question(
-      json['question'],
-      json['statement'],
-      List<String>.from(json['answers']),
-      json['correctAnswer'],
-    );
-  }
-}
+//   factory Question.fromJson(Map<String, dynamic> json) {
+//     return Question(
+//       json['question'],
+//       json['statement'],
+//       List<String>.from(json['answers']),
+//       json['correctAnswer'],
+//     );
+//   }
+// }
 
-Future<void> readJson() async {
-  final String response =
-      await rootBundle.loadString('lib/questions/questions.json');
-  final data = await json.decode(response);
-  for (var i = 0; i < data["questions"].length; i++) {
-    questions.add(Question.fromJson(data["questions"][i]));
-  }
-}
+// Future<void> readJson() async {
+//   final String response =
+//       await rootBundle.loadString('lib/questions/questions.json');
+//   final data = await json.decode(response);
+//   for (var i = 0; i < data["questions"].length; i++) {
+//     questions.add(Question.fromJson(data["questions"][i]));
+//   }
+// }
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -55,7 +54,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  int currentQuestion = 0;
+  int currentQuestion = Random().nextInt(questions.length);
   bool isExpanded = false;
   bool isCorrect = false;
   bool isWrong = false;
@@ -66,7 +65,6 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    readJson();
     SystemChannels.textInput.invokeMethod('TextInput.hide');
   }
 
@@ -175,7 +173,6 @@ class _QuizScreenState extends State<QuizScreen> {
                       );
                     }
                     currClueIndex++;
-
                   } else {
                     if (isCooldown == false) {
                       setState(() {

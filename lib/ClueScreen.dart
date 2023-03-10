@@ -24,37 +24,32 @@ class _ClueScreenState extends State<ClueScreen> {
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           drawer: Drawer(
-            child: Column(
-                children: [
-                  Container(
-                    height: 100,
-                    width: double.infinity,
-                    color: const Color.fromARGB(255, 254, 125, 85),
-                    child: const Center(
-                      child: Text(
-                        "Last Clue",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontFamily: "Poppins"
-                        ),
-                      ),
-                    ),
+            child: Column(children: [
+              Container(
+                height: 100,
+                width: double.infinity,
+                color: const Color.fromARGB(255, 254, 125, 85),
+                child: const Center(
+                  child: Text(
+                    "Last Clue",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontFamily: "Poppins"),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Text(
-                      (currClueIndex >= 0) ? groupAClues[currClueIndex] : "",
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontFamily: "Poppins"
-                      ),
-                    ),
-                  ),
-                ]),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  (currClueIndex >= 0) ? groupAClues[currClueIndex] : "",
+                  style: const TextStyle(fontSize: 20, fontFamily: "Poppins"),
+                ),
+              ),
+            ]),
           ),
           // Display congratulations you got the clue and display the clue below it also navigate to the next screen
           body: Center(
@@ -94,12 +89,12 @@ class _ClueScreenState extends State<ClueScreen> {
                     child: ElevatedButton(
                       onPressed: () {
                         if (currClueIndex == 4) {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (context) => const lastPage(),
-                          ),
-                        );
-                      } else {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const lastPage(),
+                            ),
+                          );
+                        } else {
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                               builder: (context) => const QrLandingPage(),
@@ -108,13 +103,14 @@ class _ClueScreenState extends State<ClueScreen> {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 254, 125, 85),
+                        backgroundColor:
+                            const Color.fromARGB(255, 254, 125, 85),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                       child: const Text(
-                          'Next',
+                        'Next',
                         style: TextStyle(
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.bold,
