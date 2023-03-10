@@ -45,7 +45,7 @@ class _QuizScreenState extends State<QuizScreen> {
             elevation: MaterialStateProperty.all(0),
             backgroundColor: (isCorrect &&
                     index == questions[currentQuestion].correctAnswer)
-                ? MaterialStateProperty.all(Colors.grey)
+                ? MaterialStateProperty.all(Colors.green)
                 : (isWrong && index != questions[currentQuestion].correctAnswer)
                     ? MaterialStateProperty.all(Colors.red)
                     : (isWrong &&
